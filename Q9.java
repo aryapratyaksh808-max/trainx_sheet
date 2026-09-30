@@ -22,4 +22,5 @@ public class Q9 {
                }
                System.out.println("Sum of cubes = " + SumOfCubes.calculate(n));
           }
+     }
 }

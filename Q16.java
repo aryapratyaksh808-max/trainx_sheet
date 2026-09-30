@@ -34,4 +34,5 @@ public class Q16 {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println(ArmstrongNumberChecker.isArmstrongNumber(scanner.nextInt()));
         }
+    }
 }

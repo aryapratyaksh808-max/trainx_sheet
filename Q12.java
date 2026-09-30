@@ -19,4 +19,5 @@ public class Q12 {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println(DigitCounter.countDigits(scanner.nextInt()));
         }
+    }
 }

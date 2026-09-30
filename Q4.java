@@ -12,5 +12,5 @@ public class Q4 {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println(ParityChecker.isEven(scanner.nextInt()));
         }
-     
+    }
 }

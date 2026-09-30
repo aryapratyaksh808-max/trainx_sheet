@@ -14,6 +14,7 @@ class ArrayPalindromeChecker {
             right--;
         }
         return true;
+    }
 }
 
 public class Q51 {
@@ -27,4 +28,5 @@ public class Q51 {
             }
             System.out.println(ArrayPalindromeChecker.isPalindrome(values));
         }
+    }
 }

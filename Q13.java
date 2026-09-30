@@ -11,6 +11,7 @@ class DigitSummer {
             remaining /= 10;
         }
         return sum;
+    }
 }
 
 public class Q13 {
@@ -19,4 +20,5 @@ public class Q13 {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println(DigitSummer.sumOfDigits(scanner.nextInt()));
         }
+    }
 }

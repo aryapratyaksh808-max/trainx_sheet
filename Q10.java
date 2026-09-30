@@ -14,6 +14,7 @@ class PrimeChecker {
             }
         }
         return true;
+    }
 }
 public class Q10 {
     public static void main(String[] args) {
@@ -22,4 +23,5 @@ public class Q10 {
           int number = scanner.nextInt();
           System.out.println(PrimeChecker.isPrime(number) ? "Yes" : "No");
        }
+    }
 }
