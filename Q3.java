@@ -1,17 +1,11 @@
-import java.util.*;
+import java.util.Scanner;
+// Problem: Diye gaye integer ka last digit print karo; negative sign count nahi hota.
 public class Q3 {
-     public static void main(String[] args){
-           Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
-    int lastDigit;
-     if(n>=0){
-     lastDigit = n%10;}
-    else{
-        lastDigit = (-n)%10; 
+  public static void main(String[] args) {
+    // Remainder par abs lagane se MIN_VALUE ke liye bhi overflow nahi hota.
+    try (Scanner scanner = new Scanner(System.in)) {
+      int number = scanner.nextInt();
+      System.out.println(Math.abs(number % 10));
     }
-   System.out.print(lastDigit);
-      
-
-
-     }
+  }
 }

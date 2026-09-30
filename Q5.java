@@ -3,21 +3,17 @@ import java.util.Scanner;
 
 
 public class Q5 {
-         public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        
-          
-        // code here
-        int temp = a;
-        a =b ;
-        b = temp;
-    
-        
-        
+    public static void main(String[] args) {
+        // Temporary variable purani value ko swap ke dauran safe rakhta hai.
+        try (Scanner scanner = new Scanner(System.in)) {
+            int first = scanner.nextInt();
+            int second = scanner.nextInt();
 
-        System.out.println(a + " " + b);
-    }
+            int temporary = first;
+            first = second;
+            second = temporary;
+
+            System.out.println(first + " " + second);
+        }
      
 }

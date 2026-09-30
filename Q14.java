@@ -1,26 +1,23 @@
-class Solution {
-    public static boolean isPalindrome(int n) {
-        if(n<0) n = -n;
-        if(n%10 == n) return true;
-        // code here
-        int rev = 0;
-        int temp = n;
-        while(temp<0)
-        {
-            int last  = temp%10;
-            temp = temp/10;
-            rev  = rev *10 +last;
+// Problem: Check karo ki number ulta padhne par bhi wahi rehta hai ya nahi.
+class NumberPalindromeChecker {
+    static boolean isPalindrome(int number) {
+        // Negative numbers palindrome nahi maane jaate; zero palindrome hai.
+        if (number < 0) {
+            return false;
         }
-        
-        if(rev == temp){
-            return true;
+
+        int original = number;
+        long reversed = 0;
+        while (number > 0) {
+            reversed = reversed * 10 + number % 10;
+            number /= 10;
         }
-       return false;
-    }
+        return original == reversed;
 }
 public class Q14 {
-     public static void main(String[] args){
-          bool s = Solution.isPalindrome(-8778);
-          
-     }
+    public static void main(String[] args) {
+        // Sample result ko print karte hain, taaki palindrome check visibly verify ho.
+        int number = 8778;
+        System.out.println(NumberPalindromeChecker.isPalindrome(number));
+    }
 }

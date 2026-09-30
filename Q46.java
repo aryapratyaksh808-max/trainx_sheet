@@ -1,37 +1,40 @@
-import java.util.*;
+import java.util.Scanner;
 
+// Problem: Do integer arrays input lo aur dono arrays ko alag-alag print karo.
 public class Q46 {
      public static void main(String[] args) {
-          Scanner sc = new Scanner(System.in);
-          System.out.println("enter number of element in first array");
-          int first = sc.nextInt();
-          System.out.println("enter number of element in second array");
-          int second = sc.nextInt();
-          int[] arr1 = new int[first];
-          int[] arr2 = new int[second];
-          for (int i = 0, j = 0; i < first || j < second; i++, j++) {
-               if (i < first) {
+          // Pehle dono arrays ke sizes lekar unke liye storage banate hain.
+          try (Scanner scanner = new Scanner(System.in)) {
+               System.out.print("Enter number of elements in first array: ");
+               int firstSize = scanner.nextInt();
+               System.out.print("Enter number of elements in second array: ");
+               int secondSize = scanner.nextInt();
 
-                    System.out.print("enter element of first array:");
+               int[] firstArray = new int[firstSize];
+               int[] secondArray = new int[secondSize];
 
-                    arr1[i] = sc.nextInt();
+               // Dono arrays ko independent loops mein read karne se indexes simple rehte hain.
+               for (int index = 0; index < firstArray.length; index++) {
+                    System.out.print("Enter first array element: ");
+                    firstArray[index] = scanner.nextInt();
                }
-               if(j<second){
-               System.out.print("enter second element : ");
-               arr2[j] = sc.nextInt();
+               for (int index = 0; index < secondArray.length; index++) {
+                    System.out.print("Enter second array element: ");
+                    secondArray[index] = scanner.nextInt();
+               }
+
+               // Arrays ko alag lines par display karte hain.
+               printArray("First array", firstArray);
+               printArray("Second array", secondArray);
           }
-          }
-          for(int i=0;i<first;i++){
-               System.out.print(arr1[i] +" ");
-               
+     }
+
+     private static void printArray(String label, int[] values) {
+          System.out.print(label + ": ");
+          for (int value : values) {
+               System.out.print(value + " ");
           }
           System.out.println();
-          
-          for(int j=0;j<second;j++){
-               System.out.print("arr2 = "+arr2[j] +" ");
-               
-          }
-          
      }
 }
      

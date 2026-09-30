@@ -1,24 +1,16 @@
-import java.util.*;
-class Solution {
-    static boolean isEven(int n) {
-        // code here
-        if(n%2 ==0){
-            return true;
-               
-        }
-        else {
-            return false;
-        }
+import java.util.Scanner;
+// Problem: Check karo ki diya gaya integer even hai ya odd.
+class ParityChecker {
+    static boolean isEven(int number) {
+        // Even number ko 2 se divide karne par remainder zero hota hai.
+        return number % 2 == 0;
     }
 }
 public class Q4 {
-     public static void main(String[] args){
-          Scanner sc = new Scanner(System.in);
-          int n = sc.nextInt();
-          Solution ss = new Solution();
-          boolean answer = ss.isEven(n);
-          System.out.println(answer);
-
-     }
+    public static void main(String[] args) {
+        // Input lekar parity ka boolean result print karte hain.
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println(ParityChecker.isEven(scanner.nextInt()));
+        }
      
 }
