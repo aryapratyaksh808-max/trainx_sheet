@@ -13,7 +13,8 @@ class Solution {
 
 public class Q21 {
      public static void main(String[] args){
-      int gCd = 
+      int gCd = Solution.gcd(4,16  );
+      System.out.println(gCd);
      }
      
 }
