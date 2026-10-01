@@ -12,6 +12,7 @@ class Solution{
      }
 }
 public class Q19 {
+  
      public static void main(String[] args){
           int n =12;
           int result = Solution.IntiSquareRoot(n);
